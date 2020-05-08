@@ -1,5 +1,19 @@
 def intersection(arrays):
 
+    result = []
+    d = {}
+    
+
+    for i in arrays:
+        for j in i:
+            if j not in d:
+                d[j] = 1
+
+            else:
+                d[j] += 1
+
+            if d[j] > 1 and j not in result:
+                result.append(j)
     """
     YOUR CODE HERE
     """
